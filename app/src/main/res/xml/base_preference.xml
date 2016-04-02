@@ -11,11 +11,11 @@
             <intent android:action="android.settings.SYNC_SETTINGS" />
         </PreferenceScreen>
         <RingtonePreference
-            android:key="notification_ringtone"
-            android:title="Notification ring tone"
-            android:ringtoneType="notification"
             android:defaultValue="@string/notification_default_ring_tone"
-            android:summary="Set notification ring tone" />
+            android:key="notification_ringtone"
+            android:ringtoneType="notification"
+            android:summary="Set notification ring tone"
+            android:title="Notification ring tone" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="sync_interval_settings"

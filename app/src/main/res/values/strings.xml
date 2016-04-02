@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Framework Strings BEGIN -->
     <string name="app_name">Odoo</string>
     <string name="sync_label_customers">Customers</string>
     <string name="toast_information_saved">Information Saved</string>
@@ -15,4 +16,46 @@
     <string name="toast_permission_download_storage">Storage permission required to create downloaded file on your sdcard.</string>
     <string name="toast_permission_download_storage_help">Storage permission required to store downloaded files on sdcard of your phone. Please grant permission for use this feature</string>
     <string name="alert_permission_help">Some of permission required to start application. Please grant permission from application settings.</string>
+    <!-- Framework Strings END -->
+
+    <!-- Login Credential BEGIN -->
+    <string name="self_url">192.168.31.108:8069</string>
+    <string name="username">admin</string>
+    <string name="password">1</string>
+    <!-- Login Credential END -->
+
+    <!-- Authority URI & Labels related strings BEGIN -->
+    <string name="att_report_authority">com.sswy.yuancloud.provider.content.sync.att_report</string>
+    <string name="hr_employee_authority">com.sswy.yuancloud.provider.content.sync.hr_employee</string>
+    <string name="school_school_authority">com.sswy.yuancloud.provider.content.sync.school_school</string>
+    <string name="hr_attendance_authority">com.sswy.yuancloud.provider.content.sync.hr_attendance</string>
+    <string name="sync_label_hr_employees">Employees</string>
+    <string name="sync_label_hr_attendance">HR Attendance</string>
+    <string name="sync_label_att_report">Attendance</string>
+    <string name="sync_label_school_school">School</string>
+    <!-- Authority URI & Labels related strings END -->
+
+    <!-- Employee fragment's string BEGIN -->
+    <string name="label_report_send">Report</string>
+    <string name="list_count">0/0</string>
+    <string name="select_teacher">Select Teacher</string>
+    <string name="dialog_qrcode">Select Method</string>
+    <string name="qrcode_generate">Generate QRCode</string>
+    <string name="qrcode_select">Scan QRCode</string>
+    <string name="update_location">Update Location</string>
+    <!-- Employee fragment's string END -->
+
+    <!-- MainActivity string BEGIN -->
+    <string name="principal">Principal</string>
+    <string name="teacher">Teacher</string>
+    <string name="school">School</string>
+    <string name="sing_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="select_date">Select Date</string>
+    <string name="current_date">Current Date</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- MainActivity string END -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -341,40 +341,43 @@ public class OdooLogin extends AppCompatActivity implements View.OnClickListener
         final String username = edtUsername.getText().toString();
         final String password = edtPassword.getText().toString();
         if (instance == null && url.equals(OConstants.URL_ODOO)) {
+            Log.v("", "Processing Self Hosted Server Login");
+            mLoginProcessStatus.setText(OResource.string(OdooLogin.this, R.string.status_logging_in));
+            mOdoo.authenticate(username, password, database, this);
             // OAuth Login or Odoo.com Login
-            mLoginProcessStatus.setText(OResource.string(OdooLogin.this, R.string.status_getting_instances));
-            mOdoo.authenticate(username, password, database, new IOdooLoginCallback() {
-                @Override
-                public void onLoginSuccess(Odoo odoo, odoo.helper.OUser oUser) {
-                    mOdoo = odoo;
-                    mUser = oUser;
-                    mOdoo.getSaasInstances(new IOdooInstanceListener() {
-                        @Override
-                        public void onInstancesLoad(List<OdooInstance> odooInstances) {
-                            OdooInstance oInstance = new OdooInstance();
-                            oInstance.setCompanyName(OConstants.ODOO_COMPANY_NAME);
-                            oInstance.setUrl(OConstants.URL_ODOO);
-                            oInstance.setDbName(database);
-                            odooInstances.add(0, oInstance);
-                            if (odooInstances.size() > 1) {
-                                OdooInstancesSelectorDialog instancesSelectorDialog =
-                                        new OdooInstancesSelectorDialog(OdooLogin.this);
-                                instancesSelectorDialog.setInstances(odooInstances);
-                                instancesSelectorDialog.setOnInstanceSelectListener(OdooLogin.this);
-                                instancesSelectorDialog.showDialog();
-                            } else {
-                                //Loggin in to odoo.com (default instance)
-                                loginProcess(oInstance, oInstance.getUrl(), database);
-                            }
-                        }
-                    });
-                }
-
-                @Override
-                public void onLoginFail(OdooError error) {
-                    loginFail(error);
-                }
-            });
+//            mLoginProcessStatus.setText(OResource.string(OdooLogin.this, R.string.status_getting_instances));
+//            mOdoo.authenticate(username, password, database, new IOdooLoginCallback() {
+//                @Override
+//                public void onLoginSuccess(Odoo odoo, odoo.helper.OUser oUser) {
+//                    mOdoo = odoo;
+//                    mUser = oUser;
+//                    mOdoo.getSaasInstances(new IOdooInstanceListener() {
+//                        @Override
+//                        public void onInstancesLoad(List<OdooInstance> odooInstances) {
+//                            OdooInstance oInstance = new OdooInstance();
+//                            oInstance.setCompanyName(OConstants.ODOO_COMPANY_NAME);
+//                            oInstance.setUrl(OConstants.URL_ODOO);
+//                            oInstance.setDbName(database);
+//                            odooInstances.add(0, oInstance);
+//                            if (odooInstances.size() > 1) {
+//                                OdooInstancesSelectorDialog instancesSelectorDialog =
+//                                        new OdooInstancesSelectorDialog(OdooLogin.this);
+//                                instancesSelectorDialog.setInstances(odooInstances);
+//                                instancesSelectorDialog.setOnInstanceSelectListener(OdooLogin.this);
+//                                instancesSelectorDialog.showDialog();
+//                            } else {
+//                                //Loggin in to odoo.com (default instance)
+//                                loginProcess(oInstance, oInstance.getUrl(), database);
+//                            }
+//                        }
+//                    });
+//                }
+//
+//                @Override
+//                public void onLoginFail(OdooError error) {
+//                    loginFail(error);
+//                }
+//            });
         } else if (instance == null) {
             Log.v("", "Processing Self Hosted Server Login");
             mLoginProcessStatus.setText(OResource.string(OdooLogin.this, R.string.status_logging_in));

@@ -10,8 +10,8 @@
     <odoo.controls.BezelImageView
         android:id="@+id/imgInstance"
         android:layout_width="48dp"
-        android:layout_gravity="center_horizontal"
         android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
         android:scaleType="fitCenter" />
 
     <TextView

@@ -20,6 +20,11 @@
 package com.odoo.config;
 
 import com.odoo.addons.customers.Customers;
+import com.odoo.addons.employees.Attendance;
+import com.odoo.addons.employees.Employees;
+import com.odoo.addons.employees.Reports;
+import com.odoo.addons.employees.Schools;
+import com.odoo.addons.projects.Tasks;
 import com.odoo.core.support.addons.AddonsHelper;
 import com.odoo.core.support.addons.OAddon;
 
@@ -32,4 +37,9 @@ public class Addons extends AddonsHelper {
      * OAddon partners = new OAddon(Partners.class).setDefault();
      */
     OAddon customers = new OAddon(Customers.class).setDefault();
+    OAddon tasks = new OAddon(Tasks.class);
+    OAddon employees = new OAddon(Employees.class).setDefault();
+    OAddon reports = new OAddon(Reports.class);
+    OAddon schools = new OAddon(Schools.class);
+    OAddon attendance = new OAddon(Attendance.class);
 }

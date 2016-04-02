@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -11,11 +11,11 @@
         android:layout_height="wrap_content"
         android:background="@color/theme_primary"
         android:minHeight="?attr/actionBarSize"
-        app:titleMarginStart="@dimen/default_16dp"
-        android:paddingTop="@dimen/statusBarHeight"
         android:paddingRight="@dimen/default_8dp"
+        android:paddingTop="@dimen/statusBarHeight"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-        app:theme="@style/ToolBarTheme" />
+        app:theme="@style/ToolBarTheme"
+        app:titleMarginStart="@dimen/default_16dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,8 +30,8 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
                 android:id="@+id/abtus_header"
+                android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:background="@color/theme_primary"
                 android:gravity="center"
@@ -58,6 +58,7 @@
                     android:text="@string/app_version_name"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#ebebeb" />
+
                 <TextView
                     android:id="@+id/txvVersionCode"
                     android:layout_width="match_parent"
