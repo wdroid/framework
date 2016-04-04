@@ -3,11 +3,11 @@
 
     <PreferenceCategory
         android:key="account_sync_settings"
-        android:title="Sync Settings">
+        android:title="同步设置">
         <PreferenceScreen
             android:key="account_settings"
             android:summary="Enable or disable data synchronization"
-            android:title="Sync Settings">
+            android:title="同步 设置">
             <intent android:action="android.settings.SYNC_SETTINGS" />
         </PreferenceScreen>
         <RingtonePreference
@@ -15,29 +15,29 @@
             android:key="notification_ringtone"
             android:ringtoneType="notification"
             android:summary="Set notification ring tone"
-            android:title="Notification ring tone" />
+            android:title="通知铃声" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="sync_interval_settings"
-        android:title="Sync interval">
+        android:title="同步时间间隔">
         <ListPreference
             android:defaultValue="1440"
             android:entries="@array/syncInterval"
             android:entryValues="@array/syncIntervalValues"
             android:key="sync_interval"
             android:summary="Define how often synchronization will be performed"
-            android:title="Sync interval" />
+            android:title="同步时间间隔" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="sync_data_limit_settings"
-        android:title="Data Sync Limit">
+        android:title="数据同步限制">
         <ListPreference
             android:defaultValue="60"
             android:entries="@array/syncDataLimit"
             android:entryValues="@array/syncDataLimitValues"
             android:key="sync_data_limit"
             android:summary="Define how old data to be synchronized"
-            android:title="Sync data limit" />
+            android:title="数据同步限制" />
     </PreferenceCategory>
 
 
