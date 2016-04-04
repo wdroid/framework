@@ -39,7 +39,7 @@ public class Tasks extends BaseFragment implements LoaderManager.LoaderCallbacks
     @Override
     public List<ODrawerItem> drawerMenus(Context context) {
         List<ODrawerItem> menu = new ArrayList<>();
-        menu.add(new ODrawerItem(TAG).setTitle("Task")
+        menu.add(new ODrawerItem(TAG).setTitle(context.getString(R.string.sync_label_task))
                 .setInstance(new Tasks())
                 .setIcon(R.drawable.ic_action_customers)
         );

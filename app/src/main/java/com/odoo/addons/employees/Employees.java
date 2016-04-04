@@ -266,7 +266,7 @@ public class Employees extends BaseFragment implements LoaderManager.LoaderCallb
     @Override
     public List<ODrawerItem> drawerMenus(Context context) {
         List<ODrawerItem> menu = new ArrayList<>();
-        menu.add(new ODrawerItem(TAG).setTitle(context.getString(R.string.teacher)).setGroupTitle());
+//        menu.add(new ODrawerItem(TAG).setTitle(context.getString(R.string.teacher)).setGroupTitle());
         menu.add(new ODrawerItem(TAG).setTitle(context.getString(R.string.teacher))
                 .setIcon(R.drawable.ic_action_customers)
                 .setInstance(new Employees()));
